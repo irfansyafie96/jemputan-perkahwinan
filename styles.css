@@ -1,0 +1,283 @@
+/* Custom font family for headings */
+.font-great-vibes {
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Base styles */
+body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d291bc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b76ba3;
+}
+
+/* Animation for form submission */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse-animation {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .font-great-vibes {
+        /* font-size: 2.5rem; - Removed to let Tailwind control size */
+    }
+}
+
+/* Form styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #ec4899;
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
+}
+
+/* Radio button styling */
+.form-radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    outline: none;
+}
+
+.form-radio:checked {
+    background-color: #ec4899;
+    border-color: #ec4899;
+}
+
+.form-radio:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* Button styling */
+.btn-loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Card styling */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Parallax effect for background */
+.parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Pattern background for Malay theme */
+.pattern-bg {
+    background-color: #fdfbf7;
+    background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Container for flex layout */
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Responsive container */
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* Main content flex */
+main {
+    flex: 1 0 auto;
+}
+
+/* Custom styles for RSVP success */
+#success-message {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Footer fixes */
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+    .font-great-vibes {
+        font-size: 2.5rem !important;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem !important;
+    }
+
+    #hero .text-xl {
+        font-size: 1.25rem !important;
+    }
+
+    #hero {
+        min-height: 70vh;
+        padding: 1.5rem 0;
+    }
+
+    #details {
+        padding: 2rem 0;
+    }
+
+    #rsvp {
+        padding: 2rem 0;
+    }
+
+    .py-12, .py-16 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .max-w-2xl, .max-w-3xl {
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bg-white {
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    /* Adjust background attachment for mobile */
+    .bg-cover {
+        background-attachment: scroll;
+    }
+
+    footer {
+        padding: 1rem 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    /* Smaller form elements on mobile */
+    input, select, textarea, button {
+        font-size: 1rem;
+    }
+
+    /* Adjust section spacing on mobile */
+    section {
+        overflow-x: hidden;
+    }
+
+    /* Specific mobile adjustments for the Malay theme */
+    .text-base, .text-lg {
+        font-size: 0.9rem;
+    }
+
+    .text-xl {
+        font-size: 1.1rem;
+    }
+
+    .text-2xl, .text-3xl {
+        font-size: 1.2rem;
+    }
+
+    /* Adjust button sizing on mobile */
+    .rounded-full {
+        padding: 0.75rem 1rem;
+    }
+
+    /* Make sure content cards are properly sized on mobile */
+    .p-6, .p-8 {
+        padding: 1rem;
+    }
+
+    /* Adjust for the Malay theme specific elements */
+    .pattern-bg {
+        background-size: 15px 15px;
+    }
+}
